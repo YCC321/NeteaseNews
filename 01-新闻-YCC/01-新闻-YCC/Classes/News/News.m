@@ -8,6 +8,7 @@
 
 #import "News.h"
 #import "NetworkTools.h"
+#import <objc/runtime.h>
 @implementation News
 + (instancetype)newsWithDict:(NSDictionary *)dict {
     id obj = [[self alloc] init];
@@ -27,7 +28,34 @@
     
     return obj;
 }
+//获取对象属性数量
++(NSArray *)properties{
+    unsigned int count = 0;
+   // 第一个参数<#__unsafe_unretained Class cls#> 是类
+    //第二个参数<#unsigned int *outCount#> 属性计数指针
+    objc_property_t *list = class_copyPropertyList(self.class, &count);
+    
+    NSLog(@"属性数量 %u", count);
+    //拿到属性数量,遍历数组
+    NSMutableArray *arrayM = [NSMutableArray arrayWithCapacity:count];
+    for ( unsigned int i = 0; i < count; ++i) {
+        //C语言中没有对象的概念,一般不需要使用 ' *'
+        objc_property_t pty = list[i];
+        
+        //属性名称
+       const char *cname =  property_getName(pty);
+       
+        //添加到数组
+        [arrayM addObject:[NSString stringWithUTF8String:cname]];
+    }
 
+    NSLog(@"%@",arrayM);
+    //释放对象
+    free(list);
+    
+    return arrayM.copy;
+    
+}
 
 //看到数组的具体内容,重写description
 - (NSString *)description{
