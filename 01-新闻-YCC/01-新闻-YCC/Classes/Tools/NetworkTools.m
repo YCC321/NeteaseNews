@@ -23,6 +23,9 @@
          */
         NSURL *url = [NSURL URLWithString:@"http://c.m.163.com/nc/article/headline/"];
         instance = [[self alloc] initWithBaseURL:url];
+        
+        //设置 添加响应解析的数据格式    添加@"text/html"格式的数据 进行反序列化,AFN值默认前面三种数据类型
+        instance.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];
     });
 
     return instance;
