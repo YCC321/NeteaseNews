@@ -29,10 +29,25 @@
     return obj;
 }
 //获取对象属性数量
-+(NSArray *)properties{
+
+const char *kPropertiesKey = "kPropertiesKey";
++(NSArray *)loadproperties{
+    
+    //利用关联对象, 给 "类" 添加属性,OC中得类,就是一个对象
+    /**
+     *  属性关联到对象
+     key 是属性的key
+     */
+    NSArray *plist = objc_getAssociatedObject(self, kPropertiesKey);
+    if (plist != nil) {
+        return plist;
+    }
+    
     unsigned int count = 0;
+    
    // 第一个参数<#__unsafe_unretained Class cls#> 是类
     //第二个参数<#unsigned int *outCount#> 属性计数指针
+    
     objc_property_t *list = class_copyPropertyList(self.class, &count);
     
     NSLog(@"属性数量 %u", count);
@@ -53,7 +68,17 @@
     //释放对象
     free(list);
     
-    return arrayM.copy;
+    //设置关联对象属性
+    /**
+     *   参数 1. 属性关联的对象
+     2. key
+     3. 值
+     4. 引用关系
+     */
+    
+    objc_setAssociatedObject(self, kPropertiesKey, arrayM, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    
+    return objc_getAssociatedObject(self, kPropertiesKey);
     
 }
 
