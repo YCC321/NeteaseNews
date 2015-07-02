@@ -20,5 +20,5 @@
 //定义一个类方法
 + (instancetype)newsWithDict:(NSDictionary *)dict;
 //加载指定 URL 的新闻数组
-+(void)loadNewsListWithURLString:(NSString *)urlString;
++(void)loadNewsListWithURLString:(NSString *)urlString finished:(void (^)(NSArray *newsList))finished;
 @end

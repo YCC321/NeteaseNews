@@ -14,6 +14,7 @@
 		A37244711B430AF8002E3E5D /* _1____YCCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A37244701B430AF8002E3E5D /* _1____YCCTests.m */; };
 		A372447E1B430C94002E3E5D /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A372447D1B430C94002E3E5D /* News.storyboard */; };
 		A37244811B430CCD002E3E5D /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A37244801B430CCD002E3E5D /* NewsTableViewController.m */; };
+		A39C9A731B45851B00BFA631 /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A39C9A721B45851B00BFA631 /* NewsCell.m */; };
 		A3B6712E1B443C7400A8EED8 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B6712D1B443C7400A8EED8 /* NSArray+Log.m */; };
 		A3CE40CF1B441C5D003E1A1F /* NetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CE40CE1B441C5D003E1A1F /* NetworkTools.m */; };
 		A3CE40D21B442B04003E1A1F /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CE40D11B442B04003E1A1F /* News.m */; };
@@ -45,6 +46,8 @@
 		A372447D1B430C94002E3E5D /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		A372447F1B430CCD002E3E5D /* NewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewController.h; sourceTree = "<group>"; };
 		A37244801B430CCD002E3E5D /* NewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewController.m; sourceTree = "<group>"; };
+		A39C9A711B45851B00BFA631 /* NewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
+		A39C9A721B45851B00BFA631 /* NewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
 		A3B6712C1B443C7400A8EED8 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
 		A3B6712D1B443C7400A8EED8 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
 		A3CE40CD1B441C5D003E1A1F /* NetworkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTools.h; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 				A37244801B430CCD002E3E5D /* NewsTableViewController.m */,
 				A3CE40D01B442B04003E1A1F /* News.h */,
 				A3CE40D11B442B04003E1A1F /* News.m */,
+				A39C9A711B45851B00BFA631 /* NewsCell.h */,
+				A39C9A721B45851B00BFA631 /* NewsCell.m */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -328,6 +333,7 @@
 				A3CE40D21B442B04003E1A1F /* News.m in Sources */,
 				A3CE40CF1B441C5D003E1A1F /* NetworkTools.m in Sources */,
 				A37244811B430CCD002E3E5D /* NewsTableViewController.m in Sources */,
+				A39C9A731B45851B00BFA631 /* NewsCell.m in Sources */,
 				A3B6712E1B443C7400A8EED8 /* NSArray+Log.m in Sources */,
 				A372445A1B430AF7002E3E5D /* AppDelegate.m in Sources */,
 				A37244571B430AF7002E3E5D /* main.m in Sources */,
