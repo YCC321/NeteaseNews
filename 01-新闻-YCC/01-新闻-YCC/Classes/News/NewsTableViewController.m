@@ -29,7 +29,7 @@
     //设置预估行高
     self.tableView.estimatedRowHeight = 80;
     
-    //设置行高(要求: 1. cell要有向下的约束,能够撑开整个Cell 2. 所有的约束不恩能够有负值)
+    //设置行高(要求: 1. cell要有向下的约束,能够撑开整个Cell 2. 所有的下方向约束能够有负值)
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     
     //测试加载新闻
