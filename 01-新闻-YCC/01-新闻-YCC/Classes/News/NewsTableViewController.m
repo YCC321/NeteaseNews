@@ -25,6 +25,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //设置预估行高
+    self.tableView.estimatedRowHeight = 80;
+    
+    //设置行高(要求: 1. cell要有向下的约束,能够撑开整个Cell 2. 所有的约束不恩能够有负值)
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
     //测试加载新闻
     
     __weak typeof(self) weakSelf = self;
@@ -43,10 +50,13 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NewsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NewsCell" forIndexPath:indexPath];
     
-    // Configure the cell...
-    cell.news = self.newsList[indexPath.row];
+    News *n = self.newsList[indexPath.row];
+    NSString *ID = [NewsCell cellIdentifier:n];
+    NewsCell *cell = [tableView dequeueReusableCellWithIdentifier:ID forIndexPath:indexPath];
+    
+    
+    cell.news = n;
     
     return cell;
 }

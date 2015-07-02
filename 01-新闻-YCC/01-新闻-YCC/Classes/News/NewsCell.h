@@ -12,4 +12,6 @@
 @interface NewsCell : UITableViewCell
 @property(nonatomic,strong) News *news;
 
+//可重用标示符
++ (NSString *)cellIdentifier:(News *)news;
 @end

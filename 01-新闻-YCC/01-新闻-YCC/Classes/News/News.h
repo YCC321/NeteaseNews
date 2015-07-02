@@ -17,6 +17,8 @@
 @property (nonatomic, copy) NSString *imgsrc;
 //跟帖数量
 @property (nonatomic, assign) int replyCount;
+//多图数组(2张)
+@property (nonatomic, strong) NSArray *imgextra;
 //定义一个类方法
 + (instancetype)newsWithDict:(NSDictionary *)dict;
 //加载指定 URL 的新闻数组

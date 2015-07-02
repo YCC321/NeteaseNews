@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *digestLabel;
 @property (weak, nonatomic) IBOutlet UILabel *replyLabel;
+@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *extraImageViews;
+
 
 
 @end
@@ -31,8 +33,28 @@
     
     // 设置图像 - AFN的图像分类不支持 GIF，绝大多数还是应该用 SDWebImage
     [self.iconView setImageWithURL:[NSURL URLWithString:news.imgsrc]];
+    
+    //判断 news模型中是否有多图
+    if (news.imgextra.count == 2) {
+        int index = 0;
+        for (UIImageView *iv in self.extraImageViews) {
+            NSString *urlString = news.imgextra[index][@"imgsrc"];
+            NSURL *url = [NSURL URLWithString:urlString];
+            
+            //设置图像
+            [iv setImageWithURL:url];
+            index++;
+        }
+    }
+
 }
 
++ (NSString *)cellIdentifier:(News *)news{
+    if (news.imgextra.count == 2) {
+        return @"imagesCell";
+    }
+    return @"NewsCell";
+}
 - (void)awakeFromNib {
     // 设置换行宽度
     
