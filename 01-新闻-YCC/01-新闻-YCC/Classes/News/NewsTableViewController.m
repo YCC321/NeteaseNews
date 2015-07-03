@@ -35,7 +35,7 @@
     //测试加载新闻
     
     __weak typeof(self) weakSelf = self;
-    [News loadNewsListWithURLString:@"T1348647853363/0-20.html" finished:^(NSArray *newsList){
+    [News loadNewsListWithURLString:@"T1370583240249/0-20.html" finished:^(NSArray *newsList){
         //设置数组数值
         weakSelf.newsList = newsList;
     }];
