@@ -64,6 +64,56 @@
                                     <outlet property="titleLabel" destination="Jjn-tU-YEY" id="uuE-k7-gV4"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BigImageCell" rowHeight="180" id="bpP-tj-4dD" customClass="NewsCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bpP-tj-4dD" id="Wmv-GI-bpx">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eg-o7-vbI" userLabel="标题">
+                                            <rect key="frame" x="8" y="8" width="38" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eup-Sx-NxR" userLabel="摘要">
+                                            <rect key="frame" x="8" y="155" width="33" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Rf-z0-4iR" userLabel="跟帖">
+                                            <rect key="frame" x="559" y="154" width="33" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hry-ce-ufK" userLabel="配图">
+                                            <rect key="frame" x="8" y="40" width="584" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="tt9-gd-PQr"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="9Rf-z0-4iR" firstAttribute="top" secondItem="Hry-ce-ufK" secondAttribute="bottom" constant="14" id="5xw-n1-Zdi"/>
+                                        <constraint firstItem="Eup-Sx-NxR" firstAttribute="top" secondItem="Hry-ce-ufK" secondAttribute="bottom" constant="15" id="AfW-E6-tQn"/>
+                                        <constraint firstItem="3eg-o7-vbI" firstAttribute="top" secondItem="Wmv-GI-bpx" secondAttribute="topMargin" id="G90-bA-qX6"/>
+                                        <constraint firstItem="9Rf-z0-4iR" firstAttribute="trailing" secondItem="Wmv-GI-bpx" secondAttribute="trailingMargin" id="Lt5-ei-HDp"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="9Rf-z0-4iR" secondAttribute="bottom" constant="1" id="MzL-h3-06h"/>
+                                        <constraint firstItem="Eup-Sx-NxR" firstAttribute="leading" secondItem="Hry-ce-ufK" secondAttribute="leading" id="Nfk-eo-Ily"/>
+                                        <constraint firstItem="3eg-o7-vbI" firstAttribute="leading" secondItem="Wmv-GI-bpx" secondAttribute="leadingMargin" id="S34-n3-eMQ"/>
+                                        <constraint firstItem="Hry-ce-ufK" firstAttribute="leading" secondItem="Wmv-GI-bpx" secondAttribute="leadingMargin" id="dMD-PU-Pax"/>
+                                        <constraint firstItem="Hry-ce-ufK" firstAttribute="top" secondItem="3eg-o7-vbI" secondAttribute="bottom" constant="14" id="mRz-HZ-oT5"/>
+                                        <constraint firstItem="Hry-ce-ufK" firstAttribute="trailing" secondItem="Wmv-GI-bpx" secondAttribute="trailingMargin" id="ooO-9v-Afu"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="digestLabel" destination="Eup-Sx-NxR" id="Jlc-Lt-qSb"/>
+                                    <outlet property="iconView" destination="Hry-ce-ufK" id="5PA-WS-AOX"/>
+                                    <outlet property="replyLabel" destination="9Rf-z0-4iR" id="HHx-me-FxS"/>
+                                    <outlet property="titleLabel" destination="3eg-o7-vbI" id="sjk-HG-fUU"/>
+                                </connections>
+                            </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="imagesCell" rowHeight="120" id="Z8c-Lk-TSM" customClass="NewsCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z8c-Lk-TSM" id="ks5-rN-gxW">
@@ -130,7 +180,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LwV-ca-uok" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3" y="131"/>
+            <point key="canvasLocation" x="-3" y="130"/>
         </scene>
     </scenes>
 </document>

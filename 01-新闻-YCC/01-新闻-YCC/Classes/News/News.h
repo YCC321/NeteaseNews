@@ -19,6 +19,8 @@
 @property (nonatomic, assign) int replyCount;
 //多图数组(2张)
 @property (nonatomic, strong) NSArray *imgextra;
+//是否大图标记
+@property (nonatomic, assign,getter=isBigImage ) BOOL imgType;
 //定义一个类方法
 + (instancetype)newsWithDict:(NSDictionary *)dict;
 //加载指定 URL 的新闻数组
